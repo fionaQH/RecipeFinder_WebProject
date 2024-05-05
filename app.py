@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 
+# This is CMPE ENGR project 
+
 app = Flask(__name__)
 
 # Testing for user login
