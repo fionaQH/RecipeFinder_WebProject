@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            background-image: url('/static/food_bj.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            font-size: 1em;
+            display: inline-block;
+            margin-bottom: 5px;
+            padding: 7px;
+            width: 20%;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255,255,255,0.8);
+            text-align: center;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .recipe {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .recipe img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Recipes</h1>
+        <ul>
+            <li class="recipe">
+                <h2>Sushi</h2>
+                <a href="{{ url_for('static', filename='sushi_2.jpg') }}">Sushi</a>
+                <p>Description: Sushi is a Japanese dish consisting of small balls or rolls of vinegar-flavored cold-cooked rice served with a garnish of raw fish, vegetables, or egg.</p>
+            </li>
+            <li class="recipe">
+                <h2>Tempura</h2>
+                <a href="{{ url_for('static', filename='tempera.jpg') }}">Tempura</a>
+                <p>Description: Japanese small dish: fried shrimps covered with the mix of flour and eggs, served with soy sauce as the dipping sauce.</p>
+            </li>
+            <li class="recipe">
+                <h2>Chicken Curry</h2>
+                <a href="{{ url_for('static', filename='japanese_curry.jpg') }}">Chicken Curry</a>
+                <p>Description: Chicken Curry is a dish originating from the Indian subcontinent. It typically consists of chicken stewed in a spiced sauce made from a mixture of aromatic spices and ingredients such as onion, garlic, ginger, and tomatoes.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

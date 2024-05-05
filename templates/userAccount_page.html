@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Recipe List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .recipe-list {
+            margin: auto;
+            padding: 20px;
+            background: white;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .recipe-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .recipe-item:last-child {
+            border-bottom: none;
+        }
+
+        .heart-button {
+            color: red;
+            cursor: pointer;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .heart-button:hover {
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recipe List</h1>
+    <div id="recipeList" class="recipe-list">
+        <div class="recipe-item" id="recipe1">
+            Japanese Curry <span class="heart-button" onclick="removeRecipe('recipe1')">❤</span>
+        </div>
+        <div class="recipe-item" id="recipe2">
+            Sushi <span class="heart-button" onclick="removeRecipe('recipe2')">❤</span>
+        </div>
+        <div class="recipe-item" id="recipe3">
+            Ramen <span class="heart-button" onclick="removeRecipe('recipe3')">❤</span>
+        </div>
+        <div class="recipe-item" id="recipe4">
+            Tempura <span class="heart-button" onclick="removeRecipe('recipe4')">❤</span>
+        </div>
+        <div class="recipe-item" id="recipe5">
+            Tonkatsu <span class="heart-button" onclick="removeRecipe('recipe5')">❤</span>
+        </div>
+    </div>
+
+    <script>
+        function removeRecipe(recipeId) {
+            var element = document.getElementById(recipeId);
+            element.parentNode.removeChild(element);
+        }
+    </script>
+</body>
+</html>
